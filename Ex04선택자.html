@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* 
+            선택자
+            1) 아이디 선택자
+            2) 클래스 선택자
+            3) 자식 선택자
+            4) 가상 선택자 : nth-child(i) -> i번째 자식
+        */
+        /* 
+        CSS 명시도
+             - 전체선택자(*) : 가중치 0
+             - 타입선택자(요소명) : 가중치 1
+             - 클래스선택자(.) : 가중치 10
+             - 아이디선택자(#) : 가중치 100
+        */
+
+
+        /*  python 수업을 들어온 선생님의 배경색을 보라색으로 변경! */
+        #python{
+            background-color: purple;
+        }
+
+        /* 1. 전체 선택자(*) : html의 모든 요소*/
+        *{
+            color: tomato;
+        }
+
+        /* 2. 요소 선택자(요소명) : html 내의 해당 요소 */
+        h1{
+            color: blue;
+        }
+        li{
+            color: green;
+        }
+
+        /* 3. 클래스 선택자(.클래스명) : 특정 요소 - 중복 가능 */
+        .crawling{
+            background-color: black;
+        }
+
+        /* 4. 아이디 선택자(#아이디명)  : 특정 요소 - 중복 불가능 */
+        #htmlcss{
+            background-color: yellow;
+        }
+
+
+        /* 
+        계층 선택자
+             -  [띄어쓰기] : 자손 선택자
+             - > : 자식 선택자
+             - + : 형제(근접후행) 선택자
+             - ~ : 형제(후행) 선택자
+         */
+
+
+        /* Q1. body를 기준으로 ul태그의 모든 자식 요소의 글자 크기를 30px로 변경 */
+        body>ul{
+            font-size: 30px;
+        }
+
+        /* Q2. li 요소 중에서 class가 crawling인 요소만 이텔릭체로 변경 */
+        li.crawling{
+            font-style: italic;
+        }
+
+        /* Q3. 첫번째 요소를 기준으로 li요소 중에서 class가 crawling인 요소의 글씨를 두껍게 */
+        li~li.crawling{
+            font-weight: 900px;
+        }
+
+        /* Q4. class가 crawling인 li 요소를 기준으로 아이디가 db인 요소의 글씨색을 빨강으로 변경 */
+            li.crawling~#db{
+                color: blueviolet;
+            }
+
+    </style>
+
+
+
+</head>
+<body>
+    <h1> 사물지능 과정</h1>
+    <ul>
+        <li id="python" class="crawling">김민수</li>
+        <p id="db">조준용</p>
+        <li id="htmlcss">임경남</li>
+        <li class="crawling">정봉균</li>
+    </ul>
+
+
+</body>
+</html>

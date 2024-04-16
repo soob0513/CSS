@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+        }
+        #red{
+            background-color: red;
+            padding: 50px;
+            /* html 요소의 크기가 변경! */
+        }
+
+        #green{
+            background-color: green;
+            padding: 10px;
+            box-sizing: border-box;
+            /* box-sizing 속성
+                 1)content-box : 기본값. 너비랑 높이가 콘텐츠 영역까지만!
+                 2)border-box : 너비랑 높이가 padding,border를 포함한 크기로 결정
+            */
+        }
+
+        #yellow{
+            background-color: yellow;
+        }
+
+        /* 
+            margin : 웹페이지 만들 때 내용이 가운데로 몰리도록. 꽉 채우면 시야가 분산되기 때문에.
+	        padding: 글자를 input태그 안에 넣을 때 공백을 주도록 움직일 때 사용
+        */
+    </style>
+
+</head>
+<body>
+    <div id="red">지유</div>
+    <div id="green">수아</div>
+    <div id="yellow">시연</div>
+
+
+</body>
+</html>

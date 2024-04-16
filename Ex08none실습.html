@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span{
+            display:none;
+            font-size: 10px;
+        }
+
+        /* a태그에 마우스를 올리면
+           a태그 옆에 있는 span이 화면에 나타나도록!
+            */
+        a:hover+span{
+            display: inline;
+        }
+
+
+    </style>
+
+
+</head>
+<body>
+    <a href="http://www.naver.com">네이버</a>
+    <span>www.naver.com</span>
+    <br>
+    <a href="http://www.daum.net">다음</a>
+    <span>www.daum.net</span>
+
+
+</body>
+</html>

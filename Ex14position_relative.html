@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* ☆position : 자유자재로 요소의 위치를 배치하는 속성
+             1) static : 태그가 위에서 아래로 순서대로 배치 (기본값)
+        */
+        div{
+            width: 200px;
+            height: 200px;
+            position: relative;
+            /* 
+             2) position : relative;
+                 -> 요소의 원래 위치(static)를 기준으로 상대적인 위치를 선정
+             3) absolute : 절대 위치 좌표를 설정
+             4) fixed : 화면을 기준으로 절대 위치 좌표 설정
+            */
+        }
+        #indigo{
+            background-color: indigo;
+            top: 100px;
+        }
+        #skyblue{
+            background-color:skyblue;
+            left: 200px;
+            z-index: 5;
+            /* z-index : 화면에 요소가 쌓이는 순서를 지정하는 속성
+                         숫자가 클수록 요소가 앞으로 나옴
+             */
+        }
+        #blue{
+            background-color:blue;
+            left: 100px;
+            bottom: 100px;
+            z-index: 4;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="indigo"></div>
+    <div id="skyblue"></div>
+    <div id="blue"></div>
+
+</body>
+</html>

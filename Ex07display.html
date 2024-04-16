@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p, span {
+            width: 200px;
+            height: 200px;
+        }
+        /*  1. display : block 
+                - 종류 : div, p, h1... 등 => 기본값 block
+                - 무조건 가로로 한줄의 영역을 차지하는 속성
+                - width, height 값 설정이 가능
+        */
+        p{
+            background-color: rgb(253, 222, 227);
+            display: inline;
+        }
+
+
+        /* 2. display : inline
+                - 종류 : span, a, strong ... 등 => 기본값 inline
+                - 내가 담은 콘텐츠까지만 영역을 차지한다.
+                - width, height 값 설정이 불가능하다.
+         */
+        .span1{
+            background-color: rgb(192, 235, 250);
+            display: block;
+        }
+
+
+        /* 3. display : inline-block
+                - inline + block => 콘텐츠까지만 크기를 삼지만 width, height 설정이 가능
+                - inline 속성 : 내용까지만 너비를 가지는 속성
+                - block 속성 : 너비와 높이 지정
+         */
+
+        /* block 과 inline-block의 차이점?
+             - block : 옆에 충분한 공간이 있음에도 요소가 옆에 올 수 없음
+             - inline-block : 요소가 바로 옆에 올 수 있음
+         */
+
+        .span2{
+            background-color: tomato;
+            display: inline-block;
+        }
+
+
+        /* 4. display : none
+                - 화면에서 해당 요소를 보이지 않게 지정
+        */
+        div{
+            background-color: aquamarine;
+            display: none;
+        }
+        /* 
+            display를 조작하는 경우
+            - 메뉴바 같이 내용이 많은 경우에 처음에는 display를 none으로 설정
+            - 마우스를 올렸을 때(mouseover) -> display block, inline으로 변경
+            - 화면상에 숨겼다가 눌렀을 때 보이게 만드는 효과
+        */
+
+    </style>
+
+</head>
+<body>
+    <!-- 
+        큰 영역 분할 : div
+        작은 영역 분할 : p
+        세부적인 스타일 : span
+     -->
+     
+    <div>div</div>
+    
+    <p>p태그</p>
+    <p>p태그</p>
+    <p>p태그</p>
+    <span class="span1">span태그</span>
+    <span class="span1">span태그</span>
+    <span class="span1">span태그</span>
+
+    <span class="span2">inline-block</span>
+    <span class="span2">inline-block</span>
+    <span class="span2">inline-block</span>
+
+    
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 2. 내부 스타일 방식 : style 태그를 사용해서 css 적용 */
+        #no2{
+            color: blue !important;
+            background-color: yellow;
+        }
+    </style>
+
+    <!-- 3. 외부 스타일 방식 : link 태그를 사용해서 외부 css를 적용.
+                             보안 유지를 위해서, 정보표현(html)과 분리를 위해서
+                             link 태그가 쓰인 순서대로 적용
+    -->
+    <link rel="stylesheet" href="./Ex20외부스타일.css">
+
+    <!-- 4. import 방식 : style 태그 내부에 @import를 사용해서 css를 적용 
+                          css 적용 순서가 예측 불가능
+    -->
+    <style>
+        @import url('Ex20import방식.css');
+    </style>
+
+</head>
+<body>
+    <h1 style="color: red;">1. 인라인 방식</h1>
+    <h1 id="no2">2. 내부 선언 방식</h1>
+    <h1 id="no3">3. 외부 선언 방식</h1>
+    <h1 id="no4">4. import 방식</h1>
+
+    <!-- 우선순위
+             - !important : 최우선으로 적용
+             - 인라인(1000점) > 내부, 외부, 임포트
+             - 나중에 선언 > 먼저 선언 (내부, 외부, 임포트는 가장 나중에 선언된 스타일 적용)
+    -->
+</body>
+</html>

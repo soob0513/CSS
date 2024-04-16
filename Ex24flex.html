@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        /* 참조 블로그 : https://studiomeal.com/archives/197 */
+
+        /* 
+        display : flex
+             - 레이아웃 배치 전용 기능
+             - 부모요소 : container
+             - 자식요소 : item
+
+             메인축(main-axis) : 아이템이 배치되는 축의 방향
+             교차축(cross-axis) : 메인축과 수직이 되는 축
+        */
+        #parents{
+            width: 800px;
+            height: 800px;
+            background-color: beige;
+            display: flex;
+            flex-direction: column;
+            /* 
+            flex-direction : 아이템이 배치되는 축(메인축)의 방향을 결정
+            
+                            1. row(기본값) 
+                                 - 메인축 : 가로
+                                 - 교차축 : 세로  
+                                 row-reverse : 가로 역순 배치
+                            2. column
+                                 - 메인축 : 세로
+                                 - 교차축 : 가로
+                                 column-reverse : 세로 역순 배치
+            */
+
+            justify-content: space-around;
+            /* 
+            justify-content : 메인축방향에서 아이템 정렬을 결정하는 속성
+                         - flex-start : 시작점 정렬, 기본값
+                         - flext-end : 끝점 정렬
+                         - center : 가운데 정렬
+                         - space-between : 아이템 사이 균일한 여백
+                         - space-evenly : 아이템 사이 + 양쪽 끝에 균일한 여백
+                         - space-around : 아이템 둘레에 균일한 여백
+            */
+
+            align-items: flex-start;
+            /* 
+            align-items :  교차축 방향으로 아이템 정렬을 결정하는 속성
+                     - flex-start : 시작점 정렬, 기본값
+                     - flex-end : 끝점 정렬
+                     - center : 가운데 정렬
+            */
+        }
+        .child{
+            width: 100px;
+            height: 100px;
+            background-color: cornflowerblue;
+        }
+
+
+        /* item1 이라는 콘텐츠의 위치를 자유자재로 바꾸고 싶다면 
+           그 콘텐츠를 포함하는 영역 자체에 flex를 주어야함 */
+        #div1{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="parents">
+        <div class="child" id="div1">item1</div>
+        <div class="child">item2</div>
+        <div class="child">item3</div>
+        <div class="child">item4</div>
+        <div class="child">item5</div>
+        <div class="child">item6</div>
+    </div>
+</body>
+</html>
